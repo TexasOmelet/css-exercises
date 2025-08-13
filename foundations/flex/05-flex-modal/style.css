@@ -33,6 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -48,6 +49,7 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  flex-shrink: 0;
 }
 
 button {
@@ -67,3 +69,38 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+.modal {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  font-size: large;
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.continue-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* The solution applies flex directly to .header, while you use .header-container. The solution uses consistent spacing (16px), while yours uses 10px. You have extra container classes not present in the solution.
+
+Put the fheader elements in header class*/
+
+
