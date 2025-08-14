@@ -5,6 +5,10 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /* Space between header, content, footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +20,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 10px;
 }
 
 input {
@@ -23,4 +28,51 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.content {
+  /* if dealing with images, start with flex: 1 to keep it clean */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #eeeeee;
+}
+
+/* removes redundancy */
+/* .header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+} */
+
+/* remove dots and inherited margin and padding */
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* removing blue and underline from hyperlink */
+a {
+  color: inherit;
+  text-decoration: none;
 }
