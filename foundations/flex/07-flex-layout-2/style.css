@@ -4,7 +4,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+    /* not needed, already accomplished with flex 1 in content. I already did that. */
 }
 
 .header {
@@ -12,7 +13,9 @@ body {
   background: darkmagenta;
   color: white;
   font-size: 32px;
-  padding: 16px;
+  font-weight: 900;
+  /* add 0 to start if already centered */
+  padding: 0 16px;
   display: flex;
   align-items: center;
 }
@@ -42,7 +45,11 @@ ul, a {
   padding: 0px;
   font-size: 24px;
   color: white;
+}
 
+/* space between list items */
+li {
+  margin-bottom: 16px;
 }
 
 .card {
@@ -50,13 +57,14 @@ ul, a {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
   width: 300px;
-  
+  padding: 16px;
 }
 
 .card-container {
   padding: 48px;
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
+  /* happens natively already */
   flex-wrap: wrap;
   gap: 48px;
 }
